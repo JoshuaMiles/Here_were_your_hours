@@ -1,0 +1,21 @@
+<h2 class="page-header"> Employees who worked on {{date}}</h2>
+
+
+
+<form method="get" action="/api/tanda-twitter">
+    <table>
+        <thead>
+        <th>Name</th>
+        </thead>
+        <tbody>
+        {{#employee}}
+            <tr>
+                <td>{{name}}</td>
+
+                <td> <input type="checkbox" name="ids" value="{{id}}"><label for="{{id}}"></label>  </td>
+            </tr>
+        {{/employee}}
+        </tbody>
+    </table>
+    <button type="submit" name='date' value="{{date}}">Press this button to send the hours to employees!</button>
+</form>
